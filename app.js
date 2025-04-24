@@ -89,5 +89,6 @@ var allMessages = []
 
 // Ao invés de usar "app.listen" que seria o normal, nesse caso se usa o "httpServer", porque o Web Socket foi gerado usando como base o servidor baseado em HTTP, então se eu não ativo esse servidor baseado em HTTP, eu não ativo o Web Socket  
 httpServer.listen(PORT, () => {
-    console.log("Ola")
+    console.log("Server on")
+    console.log(process.env.DB_USERNAME)
 })
