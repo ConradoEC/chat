@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= nomePagina %></title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.min.js"></script> -->
+        <!-- eu posso acessar o CSS sem precisar dar o caminho completo (/public/chat.css) porque ele está em uma pasta pública -->
+        <link rel="stylesheet" href="/chat.css">
+    </head>
+    <body>
+        <form id="chatForm">
+            <input id="class" type="text" name="class" placeholder="Digite o nome da sala">
+            <input id="username" type="text" name="username" placeholder="Digite seu usuário">
+            <div class="content_contentMessage" id="content_contentMessage">
+                <div id="contentMessages" class="messages"></div>
+            </div>
+            <input id="message" type="text" name="message" placeholder="Digite sua mensagem">
+            <button id="sending" type="submit">Enviar</button>
+        </form>
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/chat.js"></script>
+    </body>
+</html>
