@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "reload": "nodemon app.js",
-    "start": "node app.js"
+    "vercel-build": "node app.js"
   },
   "keywords": [],
   "author": "",
