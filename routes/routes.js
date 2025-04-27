@@ -80,7 +80,8 @@ io.on('connection', (socket) => {
 })
 
 routes.get('/', (req, res) => {
-    res.render('index', {nomePagina: 'Início'})
+    // res.render('index', {nomePagina: 'Início'})
+    res.send("Olá")
     console.log('tmj')
 })
 
