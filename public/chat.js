@@ -7,7 +7,8 @@ const chatForm = document.getElementById("chatForm")
 const contentMessages = document.getElementById('contentMessages')
 const content_contentMessage = document.getElementById('content_contentMessage')
 const thatClass = document.getElementById("class")
-var socket = io.connect("http://localhost:3000")
+var socket = io.connect("https://chat-kohl-xi-61.vercel.app/")
+//  https://vercel.com/conradoecs-projects/chat/AaWxno4me5kB38nnzCpdiLF9i2ks
 
 var clientData = {
     "username": '',
