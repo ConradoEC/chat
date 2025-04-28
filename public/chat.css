@@ -58,7 +58,6 @@ html, body {
 }
 
 #contentMessages {
-  background-color: orange;
   border: 1px solid #ddd;
   width: 100%;
   height: fit-content;
@@ -69,4 +68,10 @@ html, body {
   gap: 15px;
   background-color: rgb(78, 134, 56);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-height: 700px) {
+  #chatForm {
+    width: 96vw;
+  }
 }
