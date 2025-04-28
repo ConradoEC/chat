@@ -80,19 +80,16 @@ io.on('connection', (socket) => {
 })
 
 routes.get('/', (req, res) => {
-    // res.render('index', {nomePagina: 'Início'})
-    res.send("Olá")
-    console.log('tmj')
+    res.render('index', {nomePagina: 'Início'})
 })
 
 routes.get('/chat', (req, res) => {
     res.render('chat', {nomePagina: "Chat"})
 })
 
-routes.get('/items', async(req, res) => {
-})
-
-routes.post('/newItem', async(req, res) => {
+routes.get('/messages', async(req, res) => {
+    const allMessages = await messagesModel.find({})
+    res.status(200).send(allMessages)
 })
 
 module.exports = routes

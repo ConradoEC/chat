@@ -16,13 +16,14 @@ const httpServer = require("http").createServer(app)
 const io = new Server(httpServer)
 module.exports = io
 
-const routes = require('./routes/routes')
-
 app.set('view engine', 'ejs')
 app.set('views', 'visoes')
-app.use(routes)
 app.use(express.json())
 app.use(express.static('public'));
+
+const routes = require('./routes/routes')
+app.use(routes)
+
 
 var allMessages = []
 
