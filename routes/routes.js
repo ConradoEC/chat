@@ -92,4 +92,13 @@ routes.get('/messages', async(req, res) => {
     res.status(200).send(allMessages)
 })
 
+routes.post('/mewMessage', async(req, res) => {
+    const newMessage = await messagesModel.create({
+        "roomsName": "Sistema",
+        "messages": []
+    })
+
+    res.status(200).send("Nova mensagem")
+})
+
 module.exports = routes
