@@ -7,8 +7,7 @@ const chatForm = document.getElementById("chatForm")
 const contentMessages = document.getElementById('contentMessages')
 const content_contentMessage = document.getElementById('content_contentMessage')
 const thatClass = document.getElementById("class")
-var socket = io.connect()
-// var socket = io.connect("https://chat-test-53d3.up.railway.app")
+var socket = io.connect("https://chat-test-53d3.up.railway.app")
 
 var clientData = {
     "username": '',
